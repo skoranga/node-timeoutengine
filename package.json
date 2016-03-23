@@ -6,6 +6,13 @@
   "engines": {
     "node": ">=0.10.42"
   },
+  "license": "MIT",
+  "keywords": [
+    "service",
+    "request",
+    "timeout",
+    "adaptive"
+  ],
   "homepage": "https://github.com/skoranga/node-timeoutengine",
   "repository": {
     "type": "git",
