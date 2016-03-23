@@ -1,0 +1,31 @@
+{
+  "name": "timeoutengine",
+  "author": "Sanjeev Koranga",
+  "version": "0.1.0",
+  "main": "index",
+  "engines": {
+    "node": ">=0.10.42"
+  },
+  "homepage": "https://github.com/skoranga/node-timeoutengine",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skoranga/node-timeoutengine.git"
+  },
+  "contributors": [
+  ],
+  "scripts": {
+    "pretest": "eslint lib test",
+    "test": "NODE_ENV=test DEBUG=timeoutengine:* mocha --reporter=spec"
+  },
+  "dependencies": {
+    "debuglog": "^1",
+    "lru-cache": "^4",
+    "measured": "^1.0.0"
+  },
+  "devDependencies": {
+    "async": "^1.0.0",
+    "eslint": "^1",
+    "mocha": "^2",
+    "wreck": "^6"
+  }
+}
