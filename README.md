@@ -1,5 +1,8 @@
 # node-timeoutengine
 
+[![Build Status](https://travis-ci.org/skoranga/node-timeoutengine.png)](https://travis-ci.org/skoranga/node-timeoutengine)
+
+
 Simple node module to find the 99%ile timeout value.
 
 ```javascript
