@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "main": "index",
   "engines": {
-    "node": ">=0.10.42"
+    "node": ">=8"
   },
   "license": "MIT",
   "keywords": [
@@ -18,21 +18,19 @@
     "type": "git",
     "url": "https://github.com/skoranga/node-timeoutengine.git"
   },
-  "contributors": [
-  ],
+  "contributors": [],
   "scripts": {
-    "pretest": "eslint lib test",
+    "pretest": "eslint .",
     "test": "NODE_ENV=test DEBUG=timeoutengine:* mocha --reporter=spec"
   },
   "dependencies": {
-    "debuglog": "^1",
-    "lru-cache": "^4",
-    "measured": "^1.0.0"
+    "lru-cache": "^5",
+    "measured-core": "^1.0.0"
   },
   "devDependencies": {
-    "async": "^1.0.0",
-    "eslint": "^1",
-    "mocha": "^2",
-    "wreck": "^6"
+    "async": "^3.0.0",
+    "eslint": "^6",
+    "mocha": "^6",
+    "request": "^2"
   }
 }

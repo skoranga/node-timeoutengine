@@ -1,8 +1,9 @@
 'use strict';
 
-var Measured = require('measured'),
-    LRU = require('lru-cache'),
-    debug = require('debuglog')('timeoutengine');
+const Measured = require('measured-core');
+const LRU = require('lru-cache');
+const util = require('util');
+const debug = util.debuglog('timeoutengine');
 
 //default config
 var config = {
@@ -16,7 +17,7 @@ var cache;
 
 function initCache() {
     cache && cache.reset();
-    cache = LRU(config.cache_size);
+    cache = new LRU(config.cache_size);
 }
 
 initCache();

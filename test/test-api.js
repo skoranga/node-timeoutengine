@@ -2,7 +2,7 @@
 
 var assert = require('assert'),
     async = require('async'),
-    wreck = require('wreck'),
+    request = require('request'),
     timeoutengine = require('../index');
 
 describe('timeout engine for wreck', function () {
@@ -20,7 +20,7 @@ describe('timeout engine for wreck', function () {
                 timeout: timeoutengine.getSocketTimeout(serviceName) || defaultTimeout
             };
             var reqStart = Date.now();
-            var req = wreck.get('http://httpbin.org/get', options, function (err, response, payload) {
+            request('http://httpbin.org/get', options, function (err, response, payload) {
 
                 timeoutengine.addSocketDuration(serviceName, Date.now() - reqStart);    //adding the socket duration
 
